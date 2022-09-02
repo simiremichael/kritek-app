@@ -11,10 +11,11 @@ interface Posts {
   image: string
 }
 
+const appUrl = process.env.REACT_APP_POST_URL
 export const postsApi = createApi({
 
   reducerPath: 'postsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000",
+  baseQuery: fetchBaseQuery({ baseUrl: appUrl,
 }),
 refetchOnFocus: true,
 tagTypes: ['Posts'],
